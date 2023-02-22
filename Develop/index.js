@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require(/utils/generateMarkdown)
+const generateMarkdown = require('./utils/generateMarkdown')
 const fs = require('fs')
 // TODO: Create an array of questions for user input
 const questions = [
@@ -71,18 +71,6 @@ const questions = [
                             choices: ['apache','MIT License','GNU General Public License','none']
                             },    
                                              
-                        {
-                        name:'contributers',
-                        type: 'input',
-                        message: 'What are the contributer guidelines?',
-                        validate: chosenTable => {
-                            if(chosenTable) {
-                                return true;
-                            } else{
-                                return false;
-                            }
-                            }
-                        },
                         {
                             name:'test',
                             type: 'input',
